@@ -1,0 +1,33 @@
+#tafet 'GZZS' do
+# Uncomment this line if you're using Swift or would like to use dynamic frameworks
+# use_frameworks!
+
+# Pods for GZZS
+
+#source 'https://github.com/CocoaPods/Specs.git'
+#platform :ios, '8.0'
+#use_frameworks!
+
+target ‘GZZS’ do
+    react_native_path = "./ReactComponent/node_modules/react-native"
+    pod "Yoga", :path => "#{react_native_path}/ReactCommon/yoga"
+    pod 'React', :path => react_native_path , :subspecs => [
+   'Core',
+    'ART',
+    'RCTActionSheet',
+    'RCTAdSupport',
+    'RCTGeolocation',
+    'RCTImage',
+    'RCTNetwork',
+    'RCTPushNotification',
+    'RCTSettings',
+    'RCTText',
+    'RCTVibration',
+    'RCTWebSocket',
+    'RCTLinkingIOS',
+    'BatchedBridge',
+    'RCTCameraRoll',
+    'RCTImageResizer'
+    ]
+end
+
